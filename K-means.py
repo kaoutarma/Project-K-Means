@@ -101,6 +101,7 @@ for index, row in gData.iterrows():
         ).add_to(maps)
 #affichage de la carte:
 maps
+maps.save("output/Bristol-City-bike.html") #la carte sauvegardée sous format html
 #Exportation de la data frame fitted après élimination de la colonne features, dans le répertoire associé:
 fitted\
     .drop('features')\
