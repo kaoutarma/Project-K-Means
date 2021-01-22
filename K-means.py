@@ -101,6 +101,13 @@ for index, row in gData.iterrows():
         ).add_to(maps)
 #affichage de la carte:
 maps
+#Exportation de la data frame fitted après élimination de la colonne features, dans le répertoire associé:
+fitted\
+    .drop('features')\
+    .write\
+    .format("csv")\
+    .mode("overwrite")\
+    .save(path_to_output_data, header = 'true')
 #arreter la session spark:
 spark.stop()
 
